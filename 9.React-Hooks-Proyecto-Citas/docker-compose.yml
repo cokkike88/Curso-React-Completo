@@ -1,0 +1,11 @@
+version: '3.7'
+services: 
+  appointment:
+    container_name: appointment_frontend
+    build: .
+    volumes: 
+      - .:/web
+    restart: always
+    ports: 
+      - "9090:9090"
+    command: npm run start
